@@ -3,6 +3,7 @@ import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
 import Banner from '../Banner/Banner';
 
+
 const home = () => {
     return (
         <div>

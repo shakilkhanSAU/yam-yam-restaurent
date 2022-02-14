@@ -3,9 +3,11 @@ import { Container } from 'react-bootstrap';
 import banner_img from '../../../images/banner.png';
 import '../../style/banner.css';
 
+
 const Banner = () => {
     return (
         <div>
+
             <Container>
                 <div className="row view d-flex justify-content-center align-items-center flex-lg-row flex-column-reverse">
                     <div className="col-lg-6 col-md-12 col-sm-12">
