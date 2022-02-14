@@ -1,0 +1,25 @@
+
+     .labelText{
+         font-weight: 600;
+     }
+        .btn-allP{
+            font-weight: 600;
+
+            margin-left: 3%;
+            margin-bottom: 5%;
+            background-image: linear-gradient(to right,#ca1433f6,#dd1849b6);
+            color: rgb(252, 252, 252);
+        }
+    .user-pages{
+      text-align: center;
+      justify-content: center;
+      margin: auto;
+
+
+  }
+  .form-container{
+      border: 2px solid rgb(66, 2, 63);
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(66, 2, 63);
+    padding: 30px;
+    }
