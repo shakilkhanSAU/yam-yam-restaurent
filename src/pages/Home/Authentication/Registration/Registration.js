@@ -11,7 +11,7 @@ const Registration = () => {
                         <img src={regImg} className="img-fluid w-75" alt="" />
                     </div>
                     <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 login-page">
-
+                        {/* Registration page start from here */}
                         <form className="form-container">
                             <h3 className="text-center title mb-2" style={{ color: '#680C42 ' }}> Registration </h3>
                             <label className='labelText'>Name</label>
@@ -43,8 +43,12 @@ const Registration = () => {
                             />
                             <div className="form-footer p-2 mb-3">
                                 <h4 style={{ color: '#680C42 ' }}>Already have an account?</h4>
+                                {/* link to login page */}
                                 <Link to="/login">
-                                    <h5 className="text-decoration-none" style={{ color: '#680C42 ' }}>Please,Login</h5>
+                                    <input
+                                        className="btn btn-allP mt-3"
+                                        value="<< Back to Login"
+                                    />
                                 </Link>
                             </div>
                         </form>

@@ -1,0 +1,28 @@
+.reviews-style{
+    font-weight: 600;
+    padding: 25px;
+    margin: 5px;
+    margin-bottom: 0;
+    height: 95%; 
+    color:black;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px rgba(192, 192, 192, 0.692);
+    border-radius: 5px;
+}
+.title{
+    color: rgb(184, 42, 70);
+}
+.reviews{
+    overflow: hidden;
+height: 100%;
+}
+/* Reviewers images */
+.collection-img{
+    width: 80%;
+    height: 55%;
+    margin-left: 20%;
+}
+.infos{
+    text-align: center;
+}
