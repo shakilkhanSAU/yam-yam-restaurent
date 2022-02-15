@@ -32,7 +32,7 @@ const Footer = () => {
 
                     </Grid>
                 </Grid>
-                <p style={{ fontSize: '14px', fontWeight: '300', paddingTop: '20px', textAlign: 'center', color: 'crimson' }}>Copyright 2021 All Rights Reserved</p>
+                <p style={{ fontSize: '14px', fontWeight: '300', paddingTop: '20px', textAlign: 'center', color: 'crimson' }}>Copyright 2022 All Rights Reserved</p>
             </Container>
         </div>
     );
