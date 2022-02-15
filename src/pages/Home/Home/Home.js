@@ -4,7 +4,7 @@ import Header from '../../shared/Header/Header';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services'
 
-const home = () => {
+const Home = () => {
     return (
         <div>
             <Header></Header>
@@ -15,4 +15,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;

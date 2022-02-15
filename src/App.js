@@ -4,19 +4,21 @@ import Login from './pages/Home/Authentication/LoginPage/Login';
 import Registration from './pages/Home/Authentication/Registration/Registration';
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/shared/NotFound/NotFound';
-
+import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Registration />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Registration />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
