@@ -1,11 +1,14 @@
 .item {
     width: 150px;
+    height: 260px;
     padding: 0 0.8rem 0.8rem 0.8rem;
     background-color: #fff;
     border-radius: 30px;
     text-align: center;
     flex-direction: column;
     display: flex;
+    margin-top: 100px;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
   }
   
   .item img {
@@ -49,5 +52,12 @@
   }
   .foot_desc-price {
     font-weight: 700;
+  }
+  @media (max-width: 600px) {
+    .small {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
   
