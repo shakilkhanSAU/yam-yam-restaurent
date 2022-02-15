@@ -9,6 +9,7 @@ const Service = () => {
         .then(data => setServices(data))
     },[])
     return (
+        <div className="container my-5">
         <div className="row">
             {
                 services.map(data => <ServicesCart 
@@ -17,6 +18,7 @@ const Service = () => {
                     ></ServicesCart> )
             }
             </div>
+        </div>
     );
 };
 
