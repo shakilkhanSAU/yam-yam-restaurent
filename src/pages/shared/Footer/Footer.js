@@ -1,10 +1,12 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react';
+import './Footer.css';
 import { Button, Container } from '@mui/material';
 
 const Footer = () => {
     return (
-        <div style={{ marginBottom: '-30px', paddingTop: '30px', paddingBottom: '20px', background: '#151931' }}>
+        
+        <div style={{ marginBottom: '-30px', paddingTop: '30px', paddingBottom: '20px', background: '#fff', border: '1px' }}>
             <Container sx={{ flexGrow: 1, }}>
                 <Grid style={{ textAlign: 'left' }} container>
                     <Grid item xs={12} sm={6} md={4}>
@@ -38,7 +40,7 @@ const Footer = () => {
                 <p style={{ fontSize: '17px', fontWeight: '300', color: 'gray', paddingTop: '20px', textAlign: 'center' }}>Copyright 2021 All Rights Reserved</p>
             </Container>
         </div>
-    );
+    )
 };
 
 export default Footer;
