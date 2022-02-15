@@ -3,7 +3,7 @@ import Footer from '../../shared/Footer/Footer';
 import Header from '../../shared/Header/Header';
 import Banner from '../Banner/Banner';
 
-const home = () => {
+const Home = () => {
     return (
         <div>
             <Header></Header>
@@ -13,4 +13,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;
