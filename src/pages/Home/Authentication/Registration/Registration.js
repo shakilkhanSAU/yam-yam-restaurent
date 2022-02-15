@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import regImg from '../../../../images/register.png';
+import regImg from '../../../../images/registerlogin.jpg';
 import './Registration.css'
 const Registration = () => {
     return (

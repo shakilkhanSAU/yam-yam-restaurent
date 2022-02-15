@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import loginImg from '../../../../images/login.png'
+import loginImg from '../../../../images/registerlogin.jpg'
 const Login = () => {
     return (
         <div className="user-pages m-2">
