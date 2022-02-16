@@ -30,14 +30,11 @@ const Dashbord = (props) => {
             <br />
             {user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/addreview`}><Button color="inherit">Add Review</Button></Link>}
             <br />
-
             {user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/myorder`}><Button color="inherit">My Order</Button></Link>}
             <br />
             <Divider />
             {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/manageallOrders`}><Button color="inherit">All Orders</Button></Link>}
-
             <br />
-
         </div>
     );
 
