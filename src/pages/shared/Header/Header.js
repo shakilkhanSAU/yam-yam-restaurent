@@ -23,8 +23,6 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Link className="me-lg-3 nav-link manu-items fonts" as={Link} to="/home">Home</Link>
                             <Nav.Link className="me-lg-3 nav-link fonts" as={Link} to="/allcourses">Explore Foods</Nav.Link>
-
-
                             {
                                 user?.email ?
                                     <>
@@ -34,8 +32,6 @@ const Header = () => {
                                     :
                                     <Nav.Link className="me-lg-3 nav-link fonts" as={Link} to="/login">Sign In</Nav.Link>
                             }
-
-
                             <Navbar.Text>
                                 <Link to="/user">
                                     {user.photoURL ? <img className="user-img" src={user?.photoURL} alt="" /> :
