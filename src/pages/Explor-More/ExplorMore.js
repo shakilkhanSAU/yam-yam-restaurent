@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ServicesCart from './ServiceCart';
+import ServicesCart from '../Home/Services/ServiceCart';
+import Footer from '../shared/Footer/Footer';
+import Header from '../shared/Header/Header';
 
-const Service = () => {
+const ExplorMore = () => {
     const [ services, setServices ] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -9,7 +11,9 @@ const Service = () => {
         .then(data => setServices(data))
     },[])
     return (
-        <div className="container my-5">
+        <div>
+            <Header></Header>
+            <div className="container my-5">
         <div className="row">
             {
                 services.map(data => <ServicesCart 
@@ -19,7 +23,9 @@ const Service = () => {
             }
             </div>
         </div>
+            <Footer></Footer>
+        </div>
     );
 };
 
-export default Service;
+export default ExplorMore;

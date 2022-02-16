@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,24 +8,33 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { NavLink } from 'react-router-dom';
-import MyOrders from '../MyOrders/MyOrders';
+import { Link, Outlet } from 'react-router-dom';
+import { Button } from '@mui/material';
+import useAuth from '../../../hooks/useAuth';
 
-const drawerWidth = 200;
+const drawerWidth = 240;
 
-function Dashboard(props) {
+const Dashbord = (props) => {
+    const { admin, user } = useAuth();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
-        <div>
-            <Toolbar style={{ backgroundColor: 'crimson' }} />
+        <div className="dashbor-link">
+            <Toolbar />
             <Divider />
-
+            <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to="/home"><Button color="inherit">Home</Button></Link>
+            <br />
+            {user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/addreview`}><Button color="inherit">Add Review</Button></Link>}
+            <br />
+            {user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/myorder`}><Button color="inherit">My Order</Button></Link>}
+            <br />
+            <Divider />
+            {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/manageallOrders`}><Button color="inherit">All Orders</Button></Link>}
+            <br />
         </div>
     );
 
@@ -41,7 +49,7 @@ function Dashboard(props) {
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
                 }}
-                style={{ backgroundColor: 'crimson' }}
+                style={{ background: 'crimson' }}
             >
                 <Toolbar>
                     <IconButton
@@ -53,13 +61,9 @@ function Dashboard(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="p" noWrap component="div">
-                        <NavLink style={{ color: '#fff', textDecoration: 'none', marginRight: '30px', cursor: 'pointer' }} to="/">Home</NavLink>
+                    <Typography variant="h6" noWrap component="div">
+                        Deshbord
                     </Typography>
-                    <Typography variant="h6" style={{ textAlign: 'right' }} noWrap component="div">
-                        Dashboard
-                    </Typography>
-
                 </Toolbar>
             </AppBar>
             <Box
@@ -99,20 +103,13 @@ function Dashboard(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
-                <div>
-                    <MyOrders></MyOrders>
-                </div>
+                <Outlet></Outlet>
             </Box>
         </Box>
     );
-}
-
-Dashboard.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
 };
 
-export default Dashboard;
+
+export default Dashbord;
+
+
