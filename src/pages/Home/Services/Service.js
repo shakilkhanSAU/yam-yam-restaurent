@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ServicesCart from './ServicesCart';
+import ServicesCart from './ServiceCart';
 
 const Service = () => {
     const [ services, setServices ] = useState([]);
