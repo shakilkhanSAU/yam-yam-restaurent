@@ -10,25 +10,24 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { NavLink } from 'react-router-dom';
-import MyOrders from '../MyOrders/MyOrders';
+import MyOrder from '../../MyOrder/MyOrder';
 
-const drawerWidth = 200;
+const drawerWidth = 240;
 
-function Dashboard(props) {
+const Dashboard = (props) => {
     const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
-
-    const drawer = (
-        <div>
-            <Toolbar style={{ backgroundColor: 'crimson' }} />
-            <Divider />
-
-        </div>
-    );
+  const drawer = (
+    <div className="dashbor-link">
+      <Toolbar />
+      <Divider />
+       
+    </div>
+  );
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -55,6 +54,7 @@ function Dashboard(props) {
                     </IconButton>
                     <Typography variant="p" noWrap component="div">
                         <NavLink style={{ color: '#fff', textDecoration: 'none', marginRight: '30px', cursor: 'pointer' }} to="/">Home</NavLink>
+            
                     </Typography>
                     <Typography variant="h6" style={{ textAlign: 'right' }} noWrap component="div">
                         Dashboard
@@ -100,7 +100,7 @@ function Dashboard(props) {
             >
                 <Toolbar />
                 <div>
-                    <MyOrders></MyOrders>
+                    <MyOrder></MyOrder>
                 </div>
             </Box>
         </Box>

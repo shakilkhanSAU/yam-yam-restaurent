@@ -26,11 +26,6 @@
     margin-bottom: 0.5rem;
 }
 
-.item-foot_desc button {
-    background: #000;
-    color: #fff;
-    border-radius: 50%;
-}
 .item-head_desc {
     text-align: left;
     flex: 1;
@@ -59,4 +54,15 @@
     grid-template-columns: 1fr;
     justify-items: center;
     }
+}
+.order-btn{
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    background-color: #fe043c;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+
 }
