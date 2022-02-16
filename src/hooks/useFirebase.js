@@ -32,6 +32,7 @@ const useFirebase = () => {
                 }).catch((error) => {
                 });
                 setUser(user)
+                saveUser(email, name)
                 setOpen(true)
                 navigate('/')
             })
@@ -109,6 +110,17 @@ const useFirebase = () => {
 
     }, [])
 
+    const saveUser = (email, displayName) => {
+        const user = {email, displayName};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then()
+}
     //admin
     useEffect( () => {
         fetch(`http://localhost:5000/users/${user.email}`)
