@@ -10,7 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import DashbordHome from './DashbordHome';
 import MyOrder from '../../MyOrder/MyOrder';
 import AllOrders from './AllOrders';
@@ -23,7 +23,6 @@ const Dashbord = (props) => {
     const {admin, user} = useAuth();
     const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  let { path, url } = useRouteMatch();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -34,13 +33,13 @@ const Dashbord = (props) => {
       <Divider />
       <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to="/home"><Button color="inherit">Home</Button></Link>
       <br />     
-      { user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`${url}/addreview`}><Button color="inherit">Add Review</Button></Link>}
+      { user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`/addreview`}><Button color="inherit">Add Review</Button></Link>}
       <br />
       
-      { user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`${url}/myorder`}><Button color="inherit">My Order</Button></Link>}
+      { user.email && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`/myorder`}><Button color="inherit">My Order</Button></Link>}
       <br />
       <Divider />
-      { admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`${url}/manageallOrders`}><Button color="inherit">All Orders</Button></Link>}
+      { admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`/manageallOrders`}><Button color="inherit">All Orders</Button></Link>}
       
       <br />
       
@@ -112,21 +111,21 @@ const Dashbord = (props) => {
           sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
           <Toolbar />
-          <Switch>
-                <Route exact path={path}>
+          <Routes>
+                <Route path="/dashboard">
                     <DashbordHome></DashbordHome>
                 </Route>
-                <Route path={`${path}/myorder`}>
+                <Route path={`/myorder`}>
                     <MyOrder></MyOrder>
                 </Route>
-                <Route path={`${path}/addreview`}>
+                <Route path={`/addreview`}>
                     <AddReview></AddReview>
                 </Route>
-                <Route path={`${path}/manageallOrders`}>
+                <Route path={`/manageallOrders`}>
                     <AllOrders></AllOrders>
                 </Route>
                                               
-            </Switch>
+            </Routes>
           
         </Box>
       </Box>
