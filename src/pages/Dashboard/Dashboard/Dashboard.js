@@ -16,18 +16,18 @@ const drawerWidth = 240;
 
 const Dashboard = (props) => {
     const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const handleDrawerToggle = () => {
+        setMobileOpen(!mobileOpen);
+    };
 
-  const drawer = (
-    <div className="dashbor-link">
-      <Toolbar />
-      <Divider />
-       
-    </div>
-  );
+    const drawer = (
+        <div className="dashbor-link">
+            <Toolbar />
+            <Divider />
+
+        </div>
+    );
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -54,7 +54,7 @@ const Dashboard = (props) => {
                     </IconButton>
                     <Typography variant="p" noWrap component="div">
                         <NavLink style={{ color: '#fff', textDecoration: 'none', marginRight: '30px', cursor: 'pointer' }} to="/">Home</NavLink>
-            
+
                     </Typography>
                     <Typography variant="h6" style={{ textAlign: 'right' }} noWrap component="div">
                         Dashboard
