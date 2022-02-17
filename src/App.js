@@ -46,7 +46,6 @@ function App() {
               </Route>
               <Route path={`dashboard/makeadmin`} element={<MakeAdmin></MakeAdmin>}></Route>
               <Route path={`dashboard/addproduct`} element={<AddProduct></AddProduct>}></Route>
-              {/* <Route path={`dashboard/manageproduct`} element={<ManageProduct></ManageProduct>}></Route> */}
               <Route path={`dashboard/manageproduct`} element={<ManageAllOrders></ManageAllOrders>}></Route>
             </Route>
             <Route path="/user" element={<UserDetails></UserDetails>}></Route>
@@ -60,14 +59,3 @@ function App() {
 }
 
 export default App;
-
-// {/* <AuthProvider>
-//         <BrowserRouter>
-//           <Routes>
-//             <Route path="/" element={<Home></Home>}></Route>
-//             <Route path="/login" element={<Login />} />
-//             <Route path="/register" element={<Registration />} />
-//             <Route path="*" element={<NotFound />} />
-//           </Routes>
-//         </BrowserRouter>
-//       </AuthProvider> */}
