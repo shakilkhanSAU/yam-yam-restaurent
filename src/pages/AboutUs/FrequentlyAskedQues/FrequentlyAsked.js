@@ -1,14 +1,9 @@
 import React from 'react';
 import { Accordion, Container } from 'react-bootstrap';
-import Footer from '../../shared/Footer/Footer';
-import Header from '../../shared/Header/Header';
-import AboutUs from '../AboutUs/AboutUs';
 
-const FrequentlyAskedQues = () => {
+const FrequentlyAsked = () => {
     return (
-        <>
-            <Header></Header>
-            <AboutUs></AboutUs>
+        <div>
             <Container>
                 <h2 style={{ fontWeight: 'bold' }}>Frequently Asked Question</h2>
                 <Accordion defaultActiveKey="0">
@@ -52,9 +47,8 @@ const FrequentlyAskedQues = () => {
                     </Accordion.Item>
                 </Accordion>
             </Container>
-            <Footer></Footer>
-        </>
+        </div>
     );
 };
 
-export default FrequentlyAskedQues;
+export default FrequentlyAsked;

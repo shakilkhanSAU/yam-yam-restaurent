@@ -17,7 +17,7 @@ import MakeAdmin from './pages/Dashboard/Dashboard/MakeAdmin';
 import AddProduct from './pages/Dashboard/Dashboard/AddProduct';
 import ManageProduct from './pages/Dashboard/Dashboard/ManageProduct';
 import MyOrder from './pages/MyOrder/MyOrder';
-import FrequentlyAskedQues from './pages/AboutUs/FrequentlyAskedQues/FrequentlyAskedQues';
+import About from './pages/AboutUs/FrequentlyAskedQues/About';
 
 
 
@@ -31,7 +31,7 @@ function App() {
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/register' element={<SignUp></SignUp>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
-            <Route path='/faq' element={<FrequentlyAskedQues></FrequentlyAskedQues>}></Route>
+            <Route path='/faq' element={<About></About>}></Route>
             <Route path='/myorder' element={<MyOrder></MyOrder>}></Route>
             <Route path='/explor' element={<PrivateRoute><ExplorMore /></PrivateRoute>}></Route>
             <Route path='/order/:id' element={<PrivateRoute><Order /></PrivateRoute>}></Route>
