@@ -4,24 +4,17 @@ import { useForm } from "react-hook-form";
 const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-<<<<<<< HEAD
-        fetch('http://localhost:5000/addreview', {
+        fetch('https://young-wildwood-21988.herokuapp.com/addreview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
-=======
-        fetch('https://young-wildwood-21988.herokuapp.com/addreview', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-    })
-        .then(res => res.json())
-        .then(data => {
-            if(data.acknowledged){
-            alert('Your order is Succenss.')
-            }
->>>>>>> 9b9b4cb60d68659da779d6f435bb0234726b49e2
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    alert('Your order is Succenss.')
+                }
+            })
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
