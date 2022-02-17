@@ -31,7 +31,7 @@ const MyOrder = () => {
     return (
         <div>
             <div className="container bottom">
-                <h1 className="text-center order-text my-3">Your Orders</h1>
+                <h1 className="text-center order-text my-3">Your Orders {myOrder?.length}</h1>
                 <div className="row my-5">
                     {
                         myOrder.map(data => <MyOrderCart

@@ -1,20 +1,22 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import useOrders from '../../../hooks/useOrders';
+import useAllOrders from '../../../hooks/useAllOrders';
+import './ManageAllOrders.css'
 
 const ManageAllOrders = () => {
-    const { allOrders, setAllOrders } = useOrders();
+    const { allOrders, setAllOrders } = useAllOrders();
+    console.log(allOrders)
 
     const handleUpdate = (id) => {
-        const url = `https://whispering-tor-67182.herokuapp.com/updateOrder/${id}`;
-        const findTour = allOrders.find(tour => tour._id === id);
-        findTour.status = 'Approved'
+        const url = `https://young-wildwood-21988.herokuapp.com/deleteaddOrdre/${id}`;
+        const findOrder = allOrders.find(order => order._id === id);
+        findOrder.status = 'Approved'
         fetch(url, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(findTour)
+            body: JSON.stringify(findOrder)
         })
             .then(res => res.json())
             .then(data => {
