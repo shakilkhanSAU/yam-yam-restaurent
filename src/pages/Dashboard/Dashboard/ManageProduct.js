@@ -4,12 +4,12 @@ import ManageProductCart from './ManageProductCart';
 const ManageProduct = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://young-wildwood-21988.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, []);
     const handleAllDelete = id => {
-    fetch(`http://localhost:5000/deleteservices/${id}`, {
+    fetch(`https://young-wildwood-21988.herokuapp.com/deleteservices/${id}`, {
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'}
     })
