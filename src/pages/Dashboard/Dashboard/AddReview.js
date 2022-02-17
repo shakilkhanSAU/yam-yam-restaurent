@@ -5,21 +5,9 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         fetch('https://young-wildwood-21988.herokuapp.com/addreview', {
-<<<<<<< HEAD
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-    })
-        .then(res => res.json())
-        .then(data => {
-            if(data.acknowledged){
-            alert('Your order is Succenss.')
-            }
->>>>>>> 05b21173e87cb887386bd9ef735df37fe368297c
         })
             .then(res => res.json())
             .then(data => {
@@ -27,18 +15,12 @@ const AddReview = () => {
                     alert('Your order is Succenss.')
                 }
             })
-<<<<<<< HEAD
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
                     alert('Your order is Succenss.')
                 }
             })
-
-
-
-=======
->>>>>>> 05b21173e87cb887386bd9ef735df37fe368297c
     };
     return (
         <div className="container mt-5 order-from bottom">
