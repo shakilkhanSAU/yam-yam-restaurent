@@ -13,7 +13,6 @@ const Banner = () => {
                     <Link to={`/explor`}>
                         <button className='custom-btn'>View Menu</button>
                     </Link>
-
                 </div>
                 <div className="col-lg-6 col-md-12 col-sm-12">
                     <img className='img-fluid' src={banner_img} alt="" />
