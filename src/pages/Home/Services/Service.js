@@ -4,7 +4,7 @@ import ServicesCart from './ServiceCart';
 const Service = () => {
     const [ services, setServices ] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://young-wildwood-21988.herokuapp.com/services')
         .then(result => result.json())
         .then(data => setServices(data))
     },[])

@@ -6,7 +6,7 @@ const Comments = () => {
     const [review, setReview] = useState([]);
     const {user} = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://young-wildwood-21988.herokuapp.com/review')
         .then(res => res.json())
         .then(data => setReview(data));
         console.log(review)

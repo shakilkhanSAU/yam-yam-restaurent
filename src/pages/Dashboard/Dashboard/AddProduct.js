@@ -5,7 +5,7 @@ import '../../style/addProduct.css';
 const Addproduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addservices', {
+        fetch('https://young-wildwood-21988.herokuapp.com/addservices', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
