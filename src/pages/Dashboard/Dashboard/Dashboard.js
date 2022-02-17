@@ -35,11 +35,11 @@ const Dashbord = (props) => {
             <Divider />
             {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/manageallOrders`}><Button color="inherit">All Orders</Button></Link>}
             <br />
-            { admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black"}} to={`dashboard/makeadmin`}><Button color="inherit">Make Admin</Button></Link>}
+            {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/makeadmin`}><Button color="inherit">Make Admin</Button></Link>}
             <br />
-            { admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black"}} to={`dashboard/addproduct`}><Button color="inherit">Add Products</Button></Link>}
+            {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/addproduct`}><Button color="inherit">Add Products</Button></Link>}
             <br />
-            { admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black"}} to={`dashboard/manageproduct`}><Button color="inherit">Manage Products</Button></Link>}
+            {admin && <Link style={{ textDecoration: "none", paddingLeft: "15px", color: "black" }} to={`dashboard/manageproduct`}><Button color="inherit">Manage All Orders</Button></Link>}
         </div>
     );
 

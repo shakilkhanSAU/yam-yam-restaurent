@@ -5,23 +5,23 @@ const ManageProduct = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('https://young-wildwood-21988.herokuapp.com/services')
-        .then(res => res.json())
-        .then(data => setServices(data))
+            .then(res => res.json())
+            .then(data => setServices(data))
     }, []);
     const handleAllDelete = id => {
-    fetch(`https://young-wildwood-21988.herokuapp.com/deleteservices/${id}`, {
-        method: 'DELETE',
-        headers: {'Content-Type': 'application/json'}
-    })
-    .then(res => res.json())
-    .then(result => {
-        if(result.acknowledged){
-        alert('Are you Sure you want to cancel you order.')
-    const remainig = services.filter(service => service._id !== id);
-    setServices(remainig);
-        }
-        
-    });
+        fetch(`https://young-wildwood-21988.herokuapp.com/deleteservices/${id}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.acknowledged) {
+                    alert('Are you Sure you want to cancel you order.')
+                    const remainig = services.filter(service => service._id !== id);
+                    setServices(remainig);
+                }
+
+            });
     }
     return (
         <div className="container mt-5 service-title">
@@ -30,13 +30,13 @@ const ManageProduct = () => {
                 <div className="row">
                     {
                         services.map(data => <ManageProductCart
-                        key={data._id}
-                        cartData={data}
-                        funcd={handleAllDelete}
-                        ></ManageProductCart> )                       
+                            key={data._id}
+                            cartData={data}
+                            funcd={handleAllDelete}
+                        ></ManageProductCart>)
                     }
                 </div>
-            </div>       
+            </div>
         </div>
     );
 };
