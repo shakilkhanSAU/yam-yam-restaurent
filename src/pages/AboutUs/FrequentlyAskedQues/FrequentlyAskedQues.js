@@ -10,7 +10,7 @@ const FrequentlyAskedQues = () => {
             <Header></Header>
             <AboutUs></AboutUs>
             <Container>
-                <h3 className='main-header'>Frequently Asked Question</h3>
+                <h2 style={{ fontWeight: 'bold' }}>Frequently Asked Question</h2>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>
