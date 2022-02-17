@@ -10,10 +10,14 @@ import PrivateRoute from './pages/Home/Authentication/PrivateRoute/PrivateRoute'
 import UserDetails from './pages/UserDetails/UserDetails';
 import ExplorMore from './pages/Explor-More/ExplorMore';
 import Order from './pages/Order/Order';
-import MyOrder from './pages/MyOrder/MyOrder';
 import DashbordHome from './pages/Dashboard/Dashboard/DashbordHome';
 import AddReview from './pages/Dashboard/Dashboard/AddReview';
 import AllOrders from './pages/Dashboard/Dashboard/AllOrders';
+import MakeAdmin from './pages/Dashboard/Dashboard/MakeAdmin';
+import AddProduct from './pages/Dashboard/Dashboard/AddProduct';
+import ManageProduct from './pages/Dashboard/Dashboard/ManageProduct';
+import MyOrder from './pages/MyOrder/MyOrder';
+import About from './pages/AboutUs/FrequentlyAskedQues/About';
 
 
 
@@ -27,6 +31,7 @@ function App() {
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/register' element={<SignUp></SignUp>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
+            <Route path='/faq' element={<About></About>}></Route>
             <Route path='/myorder' element={<MyOrder></MyOrder>}></Route>
             <Route path='/explor' element={<PrivateRoute><ExplorMore /></PrivateRoute>}></Route>
             <Route path='/order/:id' element={<PrivateRoute><Order /></PrivateRoute>}></Route>
@@ -34,12 +39,14 @@ function App() {
               <Route path="/dashboard" element={<DashbordHome></DashbordHome>}>
               </Route>
               <Route path={`dashboard/myorder`} element={<MyOrder></MyOrder>}>
-
               </Route>
               <Route path={`dashboard/addreview`} element={<AddReview></AddReview>}>
               </Route>
               <Route path={`dashboard/manageallOrders`} element={<AllOrders></AllOrders>}>
               </Route>
+              <Route path={`dashboard/makeadmin`} element={<MakeAdmin></MakeAdmin>}></Route>
+              <Route path={`dashboard/addproduct`} element={<AddProduct></AddProduct>}></Route>
+              <Route path={`dashboard/manageproduct`} element={<ManageProduct></ManageProduct>}></Route>
             </Route>
             <Route path="/user" element={<UserDetails></UserDetails>}></Route>
             <Route path='/*' element={<NotFound></NotFound>}></Route>

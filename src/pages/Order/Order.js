@@ -11,7 +11,7 @@ const Order = () => {
     const {id} = useParams();
     const {user} = useAuth();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://young-wildwood-21988.herokuapp.com/services/${id}`)
         .then(res => res.json())
         .then(data => setOrderDetails(data))
     }, [id]);
@@ -20,7 +20,7 @@ const Order = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         data.status = "Pending..."
-        fetch('http://localhost:5000/order', {
+        fetch('https://young-wildwood-21988.herokuapp.com/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
