@@ -17,6 +17,7 @@ import MakeAdmin from './pages/Dashboard/Dashboard/MakeAdmin';
 import AddProduct from './pages/Dashboard/Dashboard/AddProduct';
 import ManageProduct from './pages/Dashboard/Dashboard/ManageProduct';
 import MyOrder from './pages/MyOrder/MyOrder';
+import FrequentlyAskedQues from './pages/AboutUs/FrequentlyAskedQues/FrequentlyAskedQues';
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path='/home' element={<Home></Home>}></Route>
             <Route path='/register' element={<SignUp></SignUp>}></Route>
             <Route path='/login' element={<Login></Login>}></Route>
+            <Route path='/faq' element={<FrequentlyAskedQues></FrequentlyAskedQues>}></Route>
             <Route path='/myorder' element={<MyOrder></MyOrder>}></Route>
             <Route path='/explor' element={<PrivateRoute><ExplorMore /></PrivateRoute>}></Route>
             <Route path='/order/:id' element={<PrivateRoute><Order /></PrivateRoute>}></Route>
@@ -41,10 +43,10 @@ function App() {
               <Route path={`dashboard/addreview`} element={<AddReview></AddReview>}>
               </Route>
               <Route path={`dashboard/manageallOrders`} element={<AllOrders></AllOrders>}>
-              </Route>              
-              <Route path={`dashboard/makeadmin`} element={<MakeAdmin></MakeAdmin>}></Route> 
-              <Route path={`dashboard/addproduct`} element={<AddProduct></AddProduct>}></Route> 
-              <Route path={`dashboard/manageproduct`} element={<ManageProduct></ManageProduct>}></Route>               
+              </Route>
+              <Route path={`dashboard/makeadmin`} element={<MakeAdmin></MakeAdmin>}></Route>
+              <Route path={`dashboard/addproduct`} element={<AddProduct></AddProduct>}></Route>
+              <Route path={`dashboard/manageproduct`} element={<ManageProduct></ManageProduct>}></Route>
             </Route>
             <Route path="/user" element={<UserDetails></UserDetails>}></Route>
             <Route path='/*' element={<NotFound></NotFound>}></Route>
